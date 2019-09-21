@@ -1,0 +1,169 @@
+{% extends 'layouts/blayout.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div class="bg-light mr-md-3 pt-3 px-3 overflow-hidden">
+        <h6 class="border-bottom border-gray pb-2 mb-0">সঠিকতা</h6>
+            <div class="my-3 p-3 rounded">
+                {% for a in a %}
+                    <div class="media text-muted pt-3">
+                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"
+                             xmlns="http://www.w3.org/2000/svg"
+                             preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                             aria-label="Placeholder: 32x32">
+                            <title>Placeholder</title>
+                             <rect width="100%" height="100%" fill="#007bff" class="check"></rect>
+                            <script>
+                                if(getCookie("{{a.headline}}")==1){
+                                    $(".check").addClass("visited");
+                                    $(".visited").removeClass("check");
+                                }
+                                else{
+                                    $(".check").addClass("notvisited");
+                                    $(".notvisited").removeClass("check");
+                                }
+                            </script>
+                        </svg>
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark"></strong>
+                            <a href="{{ a.link }}" target="_blank">{{ a.headline }}</a>
+
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+                <label for="formGroupExampleInput">10-20%</label>
+                            <label for="formGroupExampleInput">20-30%</label>
+                            <label for="formGroupExampleInput">30-40%</label>
+                            <label for="formGroupExampleInput">40-50%</label>
+                            <label for="formGroupExampleInput">50-60%</label>
+                          <strong><label for="formGroupExampleInput">60-70%</label></strong>
+                            <label for="formGroupExampleInput">70-80%</label>
+            <div class="my-3 p-3 rounded">
+                {% for a in p %}
+                    <div class="media text-muted pt-3">
+                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"
+                             xmlns="http://www.w3.org/2000/svg"
+                             preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                             aria-label="Placeholder: 32x32">
+                            <title>Placeholder</title>
+                             <rect width="100%" height="100%" fill="#007bff" class="check"></rect>
+
+                            <script>
+                                if(getCookie("{{a.headline}}")==1){
+                                    $(".check").addClass("visited");
+                                    $(".visited").removeClass("check");
+                                }
+                                else{
+                                    $(".check").addClass("notvisited");
+                                    $(".notvisited").removeClass("check");
+                                }
+                            </script>
+                        </svg>
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">                           </strong>
+                            <a href="{{ a.link }}" target="_blank">{{ a.headline }}</a>
+
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="bg-light mr-md-3 pt-3 px-3 overflow-hidden">
+        <h6 class="border-bottom border-gray pb-2 mb-0">বিভাগ</h6>
+            <div class="my-3 p-3 rounded">
+                {% for a in b %}
+                    <div class="media text-muted pt-3">
+                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"
+                             xmlns="http://www.w3.org/2000/svg"
+                             preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                             aria-label="Placeholder: 32x32">
+                            <title>Placeholder</title>
+                             <rect width="100%" height="100%" fill="#007bff" class="check"></rect>
+                            <script>
+                                if(getCookie("{{a.headline}}")==1){
+                                    $(".check").addClass("visited");
+                                    $(".visited").removeClass("check");
+                                }
+                                else{
+                                    $(".check").addClass("notvisited");
+                                    $(".notvisited").removeClass("check");
+                                }
+                            </script>
+
+                        </svg>
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">Bdnews24</strong>
+                            <a href="{{ a.link }}" target="_blank">{{ a.headline }}</a>
+
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        <h6 class="border-bottom border-gray pb-2 mb-0">সায়েন্স</h6>
+   <!--     <h6 class="border-bottom border-gray pb-2 mb-0">মহাকাশ 10-20%</h6> -->
+            <div class="my-3 p-3 rounded">
+                {% for a in n %}
+                    <div class="media text-muted pt-3">
+                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"
+                             xmlns="http://www.w3.org/2000/svg"
+                             preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                             >
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#007bff" class="check"></rect>
+                            <script>
+                                if(getCookie("{{a.headline}}")==1){
+                                    $(".check").addClass("visited");
+                                    $(".visited").removeClass("check");
+                                }
+                                else{
+                                    $(".check").addClass("notvisited");
+                                    $(".notvisited").removeClass("check");
+                                }
+                            </script>
+
+                        </svg>
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">পরামর্শ</strong>
+                            <a href="{{ a.link }}" target="_blank">{{ a.headline }}</a>
+
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="bg-light mr-md-3 pt-3 px-3 overflow-hidden">
+        <h6 class="border-bottom border-gray pb-2 mb-0">পরামর্শ</h6>
+            <div class="my-3 p-3 rounded">
+                {% for a in j %}
+                    <div class="media text-muted pt-3">
+                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"
+                             xmlns="http://www.w3.org/2000/svg"
+                             preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                             aria-label="Placeholder: 32x32">
+                            <title>Placeholder</title>
+                             <rect width="100%" height="100%" fill="#007bff" class="check"></rect>
+                            <script>
+                                if(getCookie("{{a.headline}}")==1){
+                                    $(".check").addClass("visited");
+                                    $(".visited").removeClass("check");
+                                }
+                                else{
+                                    $(".check").addClass("notvisited");
+                                    $(".notvisited").removeClass("check");
+                                }
+                            </script>
+                        </svg>
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark"></strong>
+                            <a href="{{ a.link }}" target="_blank">{{ a.headline }}</a>
+
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
